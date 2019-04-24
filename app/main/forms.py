@@ -1,16 +1,18 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, IntegerField, SubmitField, validators, TextAreaField
+from wtforms import StringField, IntegerField, SubmitField, validators, TextAreaField, SelectField
 from wtforms.validators import Required
+from ..models import Post, User
 
 class PostForm(FlaskForm):
     body = TextAreaField("What's your biggest idea?", validators=[Required()])
+    category = SelectField("Category?",choices=([('technology','Technology'),
+                                                 ('fashion','Fashion'),
+                                                 ('hospitality','Hospitality'),
+                                                 ('government','Government')
+                                                 ]) ,validators=[Required()])
+
     submit = SubmitField('Submit pitch')
-    
-    
-# class DeleteForm(FlaskForm):
-#     id = IntegerField("Id of the pitch to be removed")
-#     submit = SubmitField('Remove pitch')
-    
+
     
 class CommentForm(FlaskForm):
     body = StringField('', validators=[Required()])

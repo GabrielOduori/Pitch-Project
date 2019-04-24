@@ -1,0 +1,10 @@
+Dear {{ user.username }},
+
+Welcome to our Pitch List!
+
+We are mailing you because you have registered in our application.
+
+Sincerely,
+The Pitch list team.
+
+Note: replies to this email address are not monitored.
