@@ -1,0 +1,20 @@
+<div class="container">
+    {% for post in posts %}
+        <div class="post-content">
+            <div class="post-date">{{ moment(post.timestamp).fromNow() }}</div>
+            {{ post.author.username }}
+            <div class="post-body">
+            {{ post.body }}
+            </div>
+
+            
+            <div class="post-footer">
+                <a href="{{ url_for('.post', id=post.id) }}#comments">
+                    <span class="label label-primary">{{ post.comments.count() }} Comments</span>
+                </a>
+            
+        </div>
+    </div>
+  <hr>
+    {% endfor %}
+</div>

@@ -1,0 +1,13 @@
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% block page_content %}
+{% include '_post.html' %}
+<h4 id="comments">Comments</h4>
+{% if current_user.is_authenticated %}
+<div class="comment-form">
+    {{ wtf.quick_form(form_comment) }}
+</div>
+{% endif %}
+{% include 'comments.html' %}
+
+{% endblock %}
