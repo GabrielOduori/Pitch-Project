@@ -60,6 +60,9 @@ $ pip install -r requirements.txt
 * To run the tests for the class files:
 
         $ python3.7 manage.py tests
+
+## Known bugs
+* The email functionality is currently not running on the test platform     
         
 ## Technologies Used
 * Python3.7
