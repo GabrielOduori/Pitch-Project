@@ -1,24 +1,34 @@
+import os
+
+
 class Config:
+    SECRET_KEY = os.environ.get('SECRET_KEY')
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://goduori:postgres@localhost/pitchlist'
+    SQLALCHEMY_TRACK_MODIFICATIONS=False
     
-
-
-
-
+    # Email configuration
+    MAIL_SERVER = 'smpt.googlemail.com'
+    MAIL_PORT = 587
+    MAIL_USE_TLS = True
+    MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
+    MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
+    
+class TestConfig(Config):
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://goduori:postgres@localhost/pitchlist_list'
+    
 class ProConfig(Config):
     
     '''
     General configuration child class
     '''
-    
     pass
-
 
 
 class DevConfig(Config):
     '''
     Development configuration child class
     '''
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://goduori:postgres@localhost/pitchlist'
     
     DEBUG  =  True
     
@@ -26,6 +36,7 @@ class DevConfig(Config):
     
 config_options = {
     'development':DevConfig,
-    'production':ProConfig
+    'production':ProConfig,
+    'test':TestConfig
 }
     
