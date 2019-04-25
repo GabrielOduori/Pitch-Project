@@ -67,7 +67,7 @@ $ pip install -r requirements.txt
 
 ## License information
 
-News Highlight is Copyright 2019 Gabriel Oduori licensed under GNU avaliable at http://www.gnu.org/licenses.
+Pichers Zone is Copyright 2019 Gabriel Oduori licensed under GNU avaliable at http://www.gnu.org/licenses.
 
 ## Contact
 
