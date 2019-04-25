@@ -5,7 +5,7 @@ from ..models import Post, User
 
 class PostForm(FlaskForm):
     body = TextAreaField("What's your biggest idea?", validators=[Required()])
-    category = SelectField("Category?",choices=([('technology','Technology'),
+    category = SelectField("Category",choices=([('technology','Technology'),
                                                  ('fashion','Fashion'),
                                                  ('hospitality','Hospitality'),
                                                  ('government','Government')
