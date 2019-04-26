@@ -6,6 +6,7 @@ class Config:
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://goduori:postgres@localhost/pitchlist'
     SQLALCHEMY_TRACK_MODIFICATIONS=False
     
+    
     # Email configuration
     MAIL_SERVER = 'smpt.googlemail.com'
     MAIL_PORT = 587
@@ -21,7 +22,8 @@ class ProConfig(Config):
     '''
     General configuration child class
     '''
-    pass
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    
 
 
 class DevConfig(Config):

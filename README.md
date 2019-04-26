@@ -9,7 +9,7 @@ The pitches are organized by category. You can have different categories eg Tech
 
 The pitches are organized by category with the new posts should be displayed first
 
-You can view the site at: http://location.com
+You can view the site at: https://pitcher-notes.herokuapp.com/
 
 ## User Stories
 These are the behaviours/features that the application implements for use by a user.
@@ -33,7 +33,7 @@ As a user I would like to:
 * In your terminal:
         
         $ git clone https://github.com/GabrielOduori/Pitch-Project
-        $ cd News-Highlight
+        $ cd Pitch-Project
 
 ## Running the Application
 * Creating the virtual environment
