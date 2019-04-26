@@ -3,7 +3,7 @@ import os
 
 class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY')
-    # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://goduori:postgres@localhost/pitchlist'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://goduori:postgres@localhost/pitchlist'
     SQLALCHEMY_TRACK_MODIFICATIONS=False
     
     
@@ -22,7 +22,7 @@ class ProConfig(Config):
     '''
     General configuration child class
     '''
-    SQLALCHEMY_DATABASE_URI = os.environ.get("HEROKU_POSTGRESQL_BRONZE_URL")
+    # SQLALCHEMY_DATABASE_URI = os.environ.get("HEROKU_POSTGRESQL_BRONZE_URL")
     SECRET_KEY=os.environ.get("SECRET_KEY")
 
 
